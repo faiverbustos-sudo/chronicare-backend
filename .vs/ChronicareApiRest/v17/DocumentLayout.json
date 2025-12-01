@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|d:\\proyectos\\cronicos\\backend\\chronicareapirest\\chronicareapirest\\entity\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|solutionrelative:chronicareapirest\\entity\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|d:\\proyectos\\cronicos\\backend\\chronicareapirest\\chronicareapirest\\service\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|solutionrelative:chronicareapirest\\service\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|d:\\proyectos\\cronicos\\backend\\chronicareapirest\\chronicareapirest\\dbcontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|solutionrelative:chronicareapirest\\dbcontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|d:\\proyectos\\cronicos\\backend\\chronicareapirest\\chronicareapirest\\entity\\alerta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|solutionrelative:chronicareapirest\\entity\\alerta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|d:\\proyectos\\cronicos\\backend\\chronicareapirest\\chronicareapirest\\entity\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|solutionrelative:chronicareapirest\\entity\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|d:\\proyectos\\cronicos\\backend\\chronicareapirest\\chronicareapirest\\controllers\\pacientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|solutionrelative:chronicareapirest\\controllers\\pacientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|d:\\proyectos\\cronicos\\backend\\chronicareapirest\\chronicareapirest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|solutionrelative:chronicareapirest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Alerta.cs",
+              "DocumentMoniker": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\ChronicareApiRest\\Entity\\Alerta.cs",
+              "RelativeDocumentMoniker": "ChronicareApiRest\\Entity\\Alerta.cs",
+              "ToolTip": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\ChronicareApiRest\\Entity\\Alerta.cs",
+              "RelativeToolTip": "ChronicareApiRest\\Entity\\Alerta.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T14:44:14.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Registro.cs",
+              "DocumentMoniker": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\ChronicareApiRest\\Entity\\Registro.cs",
+              "RelativeDocumentMoniker": "ChronicareApiRest\\Entity\\Registro.cs",
+              "ToolTip": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\ChronicareApiRest\\Entity\\Registro.cs",
+              "RelativeToolTip": "ChronicareApiRest\\Entity\\Registro.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAcwAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T14:42:17.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\ChronicareApiRest\\Program.cs",
+              "RelativeDocumentMoniker": "ChronicareApiRest\\Program.cs",
+              "ToolTip": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\ChronicareApiRest\\Program.cs",
+              "RelativeToolTip": "ChronicareApiRest\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T14:33:20.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PacienteController.cs",
+              "DocumentMoniker": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\ChronicareApiRest\\Controllers\\PacienteController.cs",
+              "RelativeDocumentMoniker": "ChronicareApiRest\\Controllers\\PacienteController.cs",
+              "ToolTip": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\ChronicareApiRest\\Controllers\\PacienteController.cs",
+              "RelativeToolTip": "ChronicareApiRest\\Controllers\\PacienteController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T14:27:35.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PacienteService.cs",
+              "DocumentMoniker": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\ChronicareApiRest\\Service\\PacienteService.cs",
+              "RelativeDocumentMoniker": "ChronicareApiRest\\Service\\PacienteService.cs",
+              "ToolTip": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\ChronicareApiRest\\Service\\PacienteService.cs",
+              "RelativeToolTip": "ChronicareApiRest\\Service\\PacienteService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAABcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T14:27:11.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\ChronicareApiRest\\DbContext\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "ChronicareApiRest\\DbContext\\AppDbContext.cs",
+              "ToolTip": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\ChronicareApiRest\\DbContext\\AppDbContext.cs",
+              "RelativeToolTip": "ChronicareApiRest\\DbContext\\AppDbContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAiwB8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T14:24:23.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Paciente.cs",
+              "DocumentMoniker": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\ChronicareApiRest\\Entity\\Paciente.cs",
+              "RelativeDocumentMoniker": "ChronicareApiRest\\Entity\\Paciente.cs",
+              "ToolTip": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\ChronicareApiRest\\Entity\\Paciente.cs",
+              "RelativeToolTip": "ChronicareApiRest\\Entity\\Paciente.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T14:24:01.53Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

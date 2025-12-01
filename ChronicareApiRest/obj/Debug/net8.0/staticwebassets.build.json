@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "KvbGCUgUSXdAyJXQ0arXm4TfZ7jxmoLKD4knRbjAI8A=",
+  "Source": "ChronicareApiRest",
+  "BasePath": "_content/ChronicareApiRest",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
