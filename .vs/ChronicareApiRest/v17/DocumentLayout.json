@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\chronicare-backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|d:\\proyectos\\cronicos\\backend\\chronicareapirest\\chronicare-backend\\chronicareapirest\\service\\jwtidentityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|solutionrelative:chronicareapirest\\service\\jwtidentityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|d:\\proyectos\\cronicos\\backend\\chronicareapirest\\chronicare-backend\\chronicareapirest\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|solutionrelative:chronicareapirest\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|d:\\proyectos\\cronicos\\backend\\chronicareapirest\\chronicare-backend\\chronicareapirest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|solutionrelative:chronicareapirest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|d:\\proyectos\\cronicos\\backend\\chronicareapirest\\chronicare-backend\\chronicareapirest\\dbcontext\\seeders\\roleseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|solutionrelative:chronicareapirest\\dbcontext\\seeders\\roleseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1056C0A5-16CD-46C8-AE17-69B688760468}|ChronicareApiRest\\ChronicareApiRest.csproj|d:\\proyectos\\cronicos\\backend\\chronicareapirest\\chronicare-backend\\chronicareapirest\\dataaccessobject\\login\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,30 +30,69 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "JwtIdentityService.cs",
+              "DocumentMoniker": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\chronicare-backend\\ChronicareApiRest\\Service\\JwtIdentityService.cs",
+              "RelativeDocumentMoniker": "ChronicareApiRest\\Service\\JwtIdentityService.cs",
+              "ToolTip": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\chronicare-backend\\ChronicareApiRest\\Service\\JwtIdentityService.cs",
+              "RelativeToolTip": "ChronicareApiRest\\Service\\JwtIdentityService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwB8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T20:42:35.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RoleSeeder.cs",
+              "DocumentMoniker": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\chronicare-backend\\ChronicareApiRest\\DbContext\\Seeders\\RoleSeeder.cs",
+              "RelativeDocumentMoniker": "ChronicareApiRest\\DbContext\\Seeders\\RoleSeeder.cs",
+              "ToolTip": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\chronicare-backend\\ChronicareApiRest\\DbContext\\Seeders\\RoleSeeder.cs",
+              "RelativeToolTip": "ChronicareApiRest\\DbContext\\Seeders\\RoleSeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T20:40:19.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\chronicare-backend\\ChronicareApiRest\\Program.cs",
+              "RelativeDocumentMoniker": "ChronicareApiRest\\Program.cs",
+              "ToolTip": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\chronicare-backend\\ChronicareApiRest\\Program.cs",
+              "RelativeToolTip": "ChronicareApiRest\\Program.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAGsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T20:39:41.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\chronicare-backend\\ChronicareApiRest\\DataAccessObject\\Login\\LoginRequest.cs",
               "RelativeDocumentMoniker": "ChronicareApiRest\\DataAccessObject\\Login\\LoginRequest.cs",
               "ToolTip": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\chronicare-backend\\ChronicareApiRest\\DataAccessObject\\Login\\LoginRequest.cs",
               "RelativeToolTip": "ChronicareApiRest\\DataAccessObject\\Login\\LoginRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-01T20:28:43.816Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\chronicare-backend\\ChronicareApiRest\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "ChronicareApiRest\\Controllers\\AuthController.cs",
               "ToolTip": "D:\\Proyectos\\cronicos\\backend\\ChronicareApiRest\\chronicare-backend\\ChronicareApiRest\\Controllers\\AuthController.cs",
               "RelativeToolTip": "ChronicareApiRest\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAgwC0AAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAwwBUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-01T20:28:39.099Z",
               "EditorCaption": ""

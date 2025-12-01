@@ -29,9 +29,11 @@ public class JwtIdentityService
             new Claim(JwtRegisteredClaimNames.Sub, user.Id),
             new Claim("email", user.Email),
             new Claim("nombre", user.Nombre),
+            new Claim("username", user.UserName),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
 
-        claims.AddRange(roles.Select(r => new Claim(ClaimTypes.Role, r)));
+        claims.AddRange(roles.Select(r => new Claim("roles", r)));
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

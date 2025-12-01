@@ -1,5 +1,6 @@
 using System.Text;
 using ChronicareApiRest.DbContext;
+using ChronicareApiRest.DbContext.Seeders;
 using ChronicareApiRest.Identity;
 using ChronicareApiRest.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -103,6 +104,13 @@ builder.Services.AddControllers();
 
 
 var app = builder.Build();
+
+// Role seeder
+using (var scope = app.Services.CreateScope())
+{
+    await RoleSeeder.SeedRoles(scope.ServiceProvider);
+}
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

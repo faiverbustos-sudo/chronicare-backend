@@ -1,6 +1,27 @@
 [
   {
     "ContainingType": "ChronicareApiRest.Controllers.AuthController",
+    "Method": "AssignRole",
+    "RelativePath": "api/chronicare/Auth/AssignRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "roleName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChronicareApiRest.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/chronicare/Auth/Login",
     "HttpMethod": "POST",

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChronicareApiRest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9bad7a37ae676abab802c93f7de622cfc45c9d98")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19f5f8cbe4de2fc4d49c94c3922cf37eccbfc570")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChronicareApiRest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChronicareApiRest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
