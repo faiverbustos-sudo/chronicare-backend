@@ -2,6 +2,7 @@
 using ChronicareApiRest.DataAccessObject.Login;
 using ChronicareApiRest.Identity;
 using ChronicareApiRest.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Controllers;
@@ -90,6 +91,7 @@ public class AuthController : ApiControllerBase
         return Ok(new { token });
     }
 
+    [Authorize(Roles = "Admin,Medico")]
     [HttpPost]
     public async Task<IActionResult> AssignRole(string userId, string roleName)
     {

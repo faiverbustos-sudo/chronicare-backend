@@ -54,15 +54,119 @@
   },
   {
     "ContainingType": "ChronicareApiRest.Controllers.PacienteController",
-    "Method": "All",
-    "RelativePath": "api/chronicare/Paciente/All",
+    "Method": "Activar",
+    "RelativePath": "api/chronicare/Paciente/Activar/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ChronicareApiRest.DataAccessObject.Controller.APIResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ChronicareApiRest.Controllers.PacienteController",
+    "Method": "Create",
+    "RelativePath": "api/chronicare/Paciente/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ChronicareApiRest.DataAccessObject.Paciente.PacienteCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ChronicareApiRest.DataAccessObject.Controller.APIResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ChronicareApiRest.Controllers.PacienteController",
+    "Method": "GetAll",
+    "RelativePath": "api/chronicare/Paciente/GetAll",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "ChronicareApiRest.DataAccessObject.Controller.Response",
+        "Type": "ChronicareApiRest.DataAccessObject.Controller.APIResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ChronicareApiRest.Controllers.PacienteController",
+    "Method": "GetById",
+    "RelativePath": "api/chronicare/Paciente/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ChronicareApiRest.DataAccessObject.Controller.APIResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ChronicareApiRest.Controllers.PacienteController",
+    "Method": "Inactivar",
+    "RelativePath": "api/chronicare/Paciente/Inactivar/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ChronicareApiRest.DataAccessObject.Controller.APIResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -82,7 +186,33 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "ChronicareApiRest.DataAccessObject.Controller.Response",
+        "Type": "ChronicareApiRest.DataAccessObject.Controller.APIResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ChronicareApiRest.Controllers.PacienteController",
+    "Method": "Update",
+    "RelativePath": "api/chronicare/Paciente/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ChronicareApiRest.DataAccessObject.Paciente.PacienteUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ChronicareApiRest.DataAccessObject.Controller.APIResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
