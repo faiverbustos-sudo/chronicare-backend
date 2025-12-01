@@ -1,10 +1,11 @@
-﻿using System.Reflection.Emit;
-using ChronicareApiRest.Entity;
+﻿using ChronicareApiRest.Entity;
+using ChronicareApiRest.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-public class AppDbContext : DbContext
+public class ApplicationDbContext : DbContext
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options) { }
 
     public DbSet<Paciente> Pacientes { get; set; }

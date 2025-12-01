@@ -5,9 +5,9 @@ namespace ChronicareApiRest.Service;
 
 public class PacienteService
 {
-    private readonly AppDbContext _context;
+    private readonly ApplicationDbContext _context;
 
-    public PacienteService(AppDbContext context)
+    public PacienteService(ApplicationDbContext context)
     {
         _context = context;
     }

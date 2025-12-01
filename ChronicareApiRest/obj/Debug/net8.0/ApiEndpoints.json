@@ -8,8 +8,24 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
+        "Name": "model",
         "Type": "ChronicareApiRest.DataAccessObject.Login.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ChronicareApiRest.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/chronicare/Auth/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ChronicareApiRest.DataAccessObject.Identity.RegisterRequest",
         "IsRequired": true
       }
     ],

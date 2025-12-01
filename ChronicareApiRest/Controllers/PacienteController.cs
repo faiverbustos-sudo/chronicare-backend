@@ -9,10 +9,10 @@ namespace ChronicareApiRest.Controllers;
 
 public class PacienteController : ApiControllerBase
 {
-    private readonly AppDbContext _context;
+    private readonly ApplicationDbContext _context;
     private readonly PacienteService _pacienteService;
 
-    public PacienteController(AppDbContext context, PacienteService pacienteService)
+    public PacienteController(ApplicationDbContext context, PacienteService pacienteService)
     {
         _context = context;
         _pacienteService = pacienteService;
