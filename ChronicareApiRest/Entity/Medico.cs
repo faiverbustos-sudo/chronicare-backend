@@ -37,4 +37,9 @@ public class Medico
 
     [Column("fecha_registro")]
     public DateTime FechaRegistro { get; set; }
+
+    [Column("estado")]
+    [Required]
+    [MaxLength(20)]
+    public string Estado { get; set; }
 }
