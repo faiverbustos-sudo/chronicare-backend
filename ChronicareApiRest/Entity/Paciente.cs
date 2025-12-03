@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ChronicareApiRest.Entity;
 
+[Table("paciente", Schema = "chronicare")]
 public class Paciente
 {
     [Key]

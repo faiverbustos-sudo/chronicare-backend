@@ -17,24 +17,28 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        builder.Entity<Paciente>().ToTable("paciente", "chronicare");
-
         builder.Entity<Registro>()
             .HasOne(r => r.Paciente)
             .WithMany(p => p.Registros)
             .HasForeignKey(r => r.IdPaciente)
-            .HasConstraintName("fk_registro_paciente");
+            .HasConstraintName("registro_id_paciente_fkey");
+
+        builder.Entity<Registro>()
+            .HasOne(r => r.Medico)
+            .WithMany(p => p.Registros)
+            .HasForeignKey(r => r.IdMedico)
+            .HasConstraintName("registro_id_medico_fkey");
 
         builder.Entity<Alerta>()
             .HasOne(a => a.Paciente)
             .WithMany(p => p.Alertas)
             .HasForeignKey(a => a.IdPaciente)
-            .HasConstraintName("fk_alerta_paciente");
+            .HasConstraintName("alerta_id_paciente_fkey");
 
         builder.Entity<RiesgoPaciente>()
             .HasOne(r => r.Paciente)
             .WithMany(p => p.Riesgos)
             .HasForeignKey(r => r.IdPaciente)
-            .HasConstraintName("fk_riesgo_paciente_paciente");
+            .HasConstraintName("riesgo_paciente_id_paciente_fkey");
     }
 }

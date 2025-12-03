@@ -42,4 +42,6 @@ public class Medico
     [Required]
     [MaxLength(20)]
     public string Estado { get; set; }
+
+    public ICollection<Registro> Registros { get; set; } = new List<Registro>();
 }
