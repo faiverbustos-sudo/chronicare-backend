@@ -69,4 +69,5 @@ public class Paciente
     public ICollection<RiesgoPaciente> Riesgos { get; set; } = new List<RiesgoPaciente>();
     public ICollection<Medicamento> Medicamentos { get; set; } = new List<Medicamento>();
     public ICollection<Tarea> Tareas { get; set; } = new List<Tarea>();
+    public ICollection<AdherenciaMedicamento> AdherenciasMedicamento { get; set; } = new List<AdherenciaMedicamento>();
 }

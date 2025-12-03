@@ -13,7 +13,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<Alerta> Alertas { get; set; }
     public DbSet<Registro> Registros { get; set; }
     public DbSet<Medico> Medicos { get; set; }
-
+    public DbSet<AdherenciaMedicamento> AdherenciasMedicamento { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -64,5 +64,17 @@ public class ApplicationDbContext : DbContext
             .WithMany(p => p.Tareas)
             .HasForeignKey(r => r.IdAlerta)
             .HasConstraintName("tarea_id_alerta_fkey");
+
+        builder.Entity<AdherenciaMedicamento>()
+            .HasOne(r => r.Paciente)
+            .WithMany(p => p.AdherenciasMedicamento)
+            .HasForeignKey(r => r.IdPaciente)
+            .HasConstraintName("adherencia_medicamento_id_paciente_fkey");
+
+        builder.Entity<AdherenciaMedicamento>()
+            .HasOne(r => r.Medicamento)
+            .WithMany(p => p.AdherenciasMedicamento)
+            .HasForeignKey(r => r.IdMedicamento)
+            .HasConstraintName("adherencia_medicamento_id_medicamento_fkey");
     }
 }

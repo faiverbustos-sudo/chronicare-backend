@@ -1,13 +1,12 @@
 ﻿using System.Security.Claims;
 using AutoMapper;
+using ChronicareApiRest.DataAccessObject.AdherenciaMedicamento;
 using ChronicareApiRest.DataAccessObject.Controller;
 using ChronicareApiRest.DataAccessObject.Dashboard;
 using ChronicareApiRest.DataAccessObject.Medicamento;
 using ChronicareApiRest.DataAccessObject.Paciente;
-using ChronicareApiRest.DataAccessObject.Registro;
 using ChronicareApiRest.Entity;
 using ChronicareApiRest.Identity;
-using ChronicareApiRest.Profiles;
 using ChronicareApiRest.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -224,7 +223,104 @@ public class PacienteController : ApiControllerBase
         catch (Exception ex)
         {
             response.IsSuccess = false;
-            response.Message = "Error obteniendo home de paciente.";
+            response.Message = "Error obteniendo dashboard de paciente.";
+            response.Errors = new List<string> { ex.Message };
+            return BadRequest(response);
+        }
+    }
+
+
+    [Authorize(Roles = "Admin,Paciente")]
+    [HttpGet]
+    public async Task<ActionResult<APIResponse>> PacienteHoy()
+    {
+        var response = new APIResponse();
+        try
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (userId == null)
+                return Unauthorized("No se pudo obtener el usuario autenticado.");
+
+            var paciente = await _context.Pacientes
+                .Include(p => p.Medicamentos)
+                .Include(p => p.Tareas)
+                .Include(p => p.Alertas)
+                .Include(p => p.AdherenciasMedicamento)
+                .Include(p => p.Registros)
+                .FirstOrDefaultAsync(p => p.IdUsuario.ToString() == userId);
+
+            if (paciente == null)
+                return NotFound("No existe un paciente asociado a este usuario.");
+
+            var NowDate = DateTime.Now.Date;
+            var medicamentosHoy = paciente.Medicamentos.Where(x => NowDate >= x.FechaInicio && NowDate <= x.FechaFin);
+
+            var adherencias = new List<AdherenciaMedicamentoHoyDto>();
+            foreach(var medicamento in medicamentosHoy)
+            {
+                var adherenciaMedicamentos = paciente.AdherenciasMedicamento.Where(x => x.IdMedicamento == medicamento.IdMedicamento && x.IdPaciente == paciente.IdPaciente && x.FechaRegistro.Date == NowDate);
+                if(adherenciaMedicamentos.Any())
+                {
+                    foreach (var adherencia in adherenciaMedicamentos)
+                    {
+                        var adherenciaHoy = new AdherenciaMedicamentoHoyDto
+                        {
+                            IdAdherencia = adherencia.IdAdherencia,
+                            IdPaciente = adherencia.IdPaciente,
+                            IdMedicamento = adherencia.IdMedicamento,
+                            Nombre = medicamento.Nombre,
+                            FechaRegistro = adherencia.FechaRegistro,
+                            Tomado = adherencia.Tomado
+                        };
+                        adherencias.Add(adherenciaHoy);
+                    }
+                }
+                else
+                {
+                    var adherenciaHoy = new AdherenciaMedicamentoHoyDto
+                    {
+                        IdAdherencia = Guid.Empty,
+                        IdPaciente = paciente.IdPaciente,
+                        IdMedicamento = medicamento.IdMedicamento,
+                        Nombre = medicamento.Nombre,
+                        FechaRegistro = null,
+                        Tomado = false
+                    };
+                    adherencias.Add(adherenciaHoy);
+                }
+                
+            }
+
+            var registroPresion = paciente.Registros
+                .OrderByDescending(r => r.FechaRegistro)
+                .FirstOrDefault(x => x.FechaRegistro.Date == NowDate && x.TipoRegistro == "presion" && x.IdPaciente == paciente.IdPaciente);
+            var presion = registroPresion != null ? $"{registroPresion.ValorSistolica}/{registroPresion.ValorDiastolica}" : "140/90";
+
+            var registroGlucosa = paciente.Registros
+                .OrderByDescending(r => r.FechaRegistro)
+                .FirstOrDefault(x => x.FechaRegistro.Date == NowDate && x.TipoRegistro == "glucosa" && x.IdPaciente == paciente.IdPaciente);
+            var glucosa = registroGlucosa != null ? registroGlucosa.ValorNumerico : 0;
+
+            var data = new PacienteHoyDto()
+            {
+                IdPaciente = paciente.IdPaciente,
+                Nombre = paciente.Nombre,
+                Presion = presion,
+                ValorNumerico = glucosa,
+                AdherenciasMedicamentos = adherencias
+            };
+
+            response.IsSuccess = true;
+            response.Message = "Paciente encontrado.";
+            response.Result = data;
+
+            return Ok(response);
+        }
+        catch (Exception ex)
+        {
+            response.IsSuccess = false;
+            response.Message = "Error obteniendo datos de hoy del paciente.";
             response.Errors = new List<string> { ex.Message };
             return BadRequest(response);
         }

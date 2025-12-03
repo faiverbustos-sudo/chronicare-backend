@@ -43,4 +43,5 @@ public class Medicamento
     public DateTime FechaCreacion { get; set; }
 
     public Paciente Paciente { get; set; }
+    public ICollection<AdherenciaMedicamento> AdherenciasMedicamento { get; set; } = new List<AdherenciaMedicamento>();
 }
