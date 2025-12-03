@@ -54,6 +54,13 @@ public class Paciente
     [MaxLength(20)]
     public string Estado { get; set; }
 
+    [Column("proxima_cita")]
+    public DateTime ProximaCita { get; set; }
+
+    [Column("proximo_control")]
+    [MaxLength(300)]
+    public string? ProximoControl { get; set; }
+
     public ICollection<Alerta> Alertas { get; set; } = new List<Alerta>();
     public ICollection<Registro> Registros { get; set; } = new List<Registro>();
     public ICollection<RiesgoPaciente> Riesgos { get; set; } = new List<RiesgoPaciente>();
