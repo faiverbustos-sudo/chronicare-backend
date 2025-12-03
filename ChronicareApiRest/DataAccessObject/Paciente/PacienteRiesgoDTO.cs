@@ -1,6 +1,6 @@
 ﻿namespace ChronicareApiRest.DataAccessObject.Paciente;
 
-public class PacienteRiesgoDTO
+public class PacienteRiesgoDto
 {
     public Guid IdPaciente { get; set; }
     public string Nombre { get; set; }

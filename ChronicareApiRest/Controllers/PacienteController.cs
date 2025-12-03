@@ -1,8 +1,13 @@
-﻿using AutoMapper;
+﻿using System.Security.Claims;
+using AutoMapper;
 using ChronicareApiRest.DataAccessObject.Controller;
+using ChronicareApiRest.DataAccessObject.Dashboard;
+using ChronicareApiRest.DataAccessObject.Medicamento;
 using ChronicareApiRest.DataAccessObject.Paciente;
+using ChronicareApiRest.DataAccessObject.Registro;
 using ChronicareApiRest.Entity;
 using ChronicareApiRest.Identity;
+using ChronicareApiRest.Profiles;
 using ChronicareApiRest.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -170,5 +175,58 @@ public class PacienteController : ApiControllerBase
     {
         var data = await _pacienteService.ObtenerPanelRiesgo();
         return Ok(data);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    [Authorize(Roles = "Admin,Paciente")]
+    [HttpGet]
+    public async Task<ActionResult<APIResponse>> PacienteDashboard()
+    {
+        var response = new APIResponse();
+        try
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (userId == null)
+                return Unauthorized("No se pudo obtener el usuario autenticado.");
+
+            var paciente = await _context.Pacientes
+                .Include(p => p.Medicamentos)
+                .Include(p => p.Tareas)
+                .Include(p => p.Alertas)
+                .FirstOrDefaultAsync(p => p.IdUsuario.ToString() == userId);
+
+            if (paciente == null)
+                return NotFound("No existe un paciente asociado a este usuario.");
+
+            var ultimaAlerta = paciente.Alertas.OrderByDescending(a => a.FechaAlerta).Select(a => a.Descripcion).FirstOrDefault();
+
+            var dashboard = new PacienteDashboardDto()
+            {
+                IdPaciente = paciente.IdPaciente,
+                Nombre = paciente.Nombre,
+                AlertaDescripcion = ultimaAlerta != null ? ultimaAlerta : "Sin alertas.",
+                ProximaCita = paciente.ProximaCita,
+                ProximoControl = paciente.ProximoControl,
+                Tareas = paciente.Tareas.Where(a => a.Completada == false).Select(a => a.Descripcion).ToList(),
+                Medicamentos = _mapper.Map<ICollection<MedicamentoReadDto>>(paciente.Medicamentos)
+            };
+
+            response.IsSuccess = true;
+            response.Message = "Paciente encontrado.";
+            response.Result = dashboard;
+
+            return Ok(response);
+        }
+        catch (Exception ex)
+        {
+            response.IsSuccess = false;
+            response.Message = "Error obteniendo home de paciente.";
+            response.Errors = new List<string> { ex.Message };
+            return BadRequest(response);
+        }
     }
 }

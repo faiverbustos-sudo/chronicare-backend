@@ -35,10 +35,34 @@ public class ApplicationDbContext : DbContext
             .HasForeignKey(a => a.IdPaciente)
             .HasConstraintName("alerta_id_paciente_fkey");
 
+        builder.Entity<Alerta>()
+            .HasOne(a => a.Registro)
+            .WithMany(p => p.Alertas)
+            .HasForeignKey(a => a.IdRegistro)
+            .HasConstraintName("alerta_id_registro_fkey");
+
         builder.Entity<RiesgoPaciente>()
             .HasOne(r => r.Paciente)
             .WithMany(p => p.Riesgos)
             .HasForeignKey(r => r.IdPaciente)
             .HasConstraintName("riesgo_paciente_id_paciente_fkey");
+
+        builder.Entity<Medicamento>()
+            .HasOne(r => r.Paciente)
+            .WithMany(p => p.Medicamentos)
+            .HasForeignKey(r => r.IdPaciente)
+            .HasConstraintName("medicamento_id_paciente_fkey");
+
+        builder.Entity<Tarea>()
+            .HasOne(r => r.Paciente)
+            .WithMany(p => p.Tareas)
+            .HasForeignKey(r => r.IdPaciente)
+            .HasConstraintName("tarea_id_paciente_fkey");
+
+        builder.Entity<Tarea>()
+            .HasOne(r => r.Alerta)
+            .WithMany(p => p.Tareas)
+            .HasForeignKey(r => r.IdAlerta)
+            .HasConstraintName("tarea_id_alerta_fkey");
     }
 }

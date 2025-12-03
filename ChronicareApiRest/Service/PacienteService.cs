@@ -12,10 +12,10 @@ public class PacienteService
         _context = context;
     }
 
-    public async Task<List<PacienteRiesgoDTO>> ObtenerPanelRiesgo()
+    public async Task<List<PacienteRiesgoDto>> ObtenerPanelRiesgo()
     {
         return await _context.Pacientes
-        .Select(p => new PacienteRiesgoDTO
+        .Select(p => new PacienteRiesgoDto
         {
             IdPaciente = p.IdPaciente,
             Nombre = p.Nombre,

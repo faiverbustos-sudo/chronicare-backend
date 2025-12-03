@@ -1,4 +1,7 @@
-﻿namespace ChronicareApiRest.DataAccessObject.Paciente;
+﻿using ChronicareApiRest.DataAccessObject.Medicamento;
+using ChronicareApiRest.DataAccessObject.Tarea;
+
+namespace ChronicareApiRest.DataAccessObject.Paciente;
 
 public class PacienteReadDto
 {
@@ -56,4 +59,11 @@ public class PacienteReadDto
     /// EPS del paciente.
     /// </summary>
     public string? Eps { get; set; }
+
+    public DateTime? ProximaCita { get; set; }
+
+    public string? ProximoControl { get; set; }
+
+    public ICollection<MedicamentoReadDto> Medicamentos { get; set; } = new List<MedicamentoReadDto>();
+    public ICollection<TareaReadDto> Tareas { get; set; } = new List<TareaReadDto>();
 }
