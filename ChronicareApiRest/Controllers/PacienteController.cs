@@ -1,10 +1,12 @@
 ﻿using System.Security.Claims;
 using AutoMapper;
 using ChronicareApiRest.DataAccessObject.AdherenciaMedicamento;
+using ChronicareApiRest.DataAccessObject.Alerta;
 using ChronicareApiRest.DataAccessObject.Controller;
 using ChronicareApiRest.DataAccessObject.Dashboard;
 using ChronicareApiRest.DataAccessObject.Medicamento;
 using ChronicareApiRest.DataAccessObject.Paciente;
+using ChronicareApiRest.DataAccessObject.Registro;
 using ChronicareApiRest.Entity;
 using ChronicareApiRest.Identity;
 using ChronicareApiRest.Service;
@@ -13,6 +15,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApi.Controllers;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ChronicareApiRest.Controllers;
 
@@ -314,6 +317,49 @@ public class PacienteController : ApiControllerBase
             response.IsSuccess = true;
             response.Message = "Paciente encontrado.";
             response.Result = data;
+
+            return Ok(response);
+        }
+        catch (Exception ex)
+        {
+            response.IsSuccess = false;
+            response.Message = "Error obteniendo datos de hoy del paciente.";
+            response.Errors = new List<string> { ex.Message };
+            return BadRequest(response);
+        }
+    }
+
+
+    /// <summary>
+    /// Recupera la información de alertas y registros de un paciente.
+    /// </summary>
+    /// <param name="idPaciente">el id del paciente.</param>
+    /// <returns>La información de alertas y registros del paciente.</returns>
+    [Authorize(Roles = "Admin,Medico")]
+    [HttpGet("{idPaciente:guid}")]
+    public async Task<ActionResult<APIResponse>> RiesgoDetallePaciente(Guid idPaciente)
+    {
+        var response = new APIResponse();
+        try
+        {
+            var paciente = await _context.Pacientes.FindAsync(idPaciente);
+            if (paciente == null)
+            {
+                response.IsSuccess = false;
+                response.Message = "Paciente no encontrado.";
+                return NotFound(response);
+            }
+
+            var alertas = _context.Alertas.AsNoTracking().Where(x => x.IdPaciente == idPaciente).OrderBy(x => x.FechaAlerta);
+            var registros = _context.Registros.AsNoTracking().Where(x => x.IdPaciente == idPaciente).OrderBy(x => x.FechaRegistro);
+
+            response.IsSuccess = true;
+            response.Message = "Datos de paciente encontrados.";
+            response.Result = new { 
+                Paciente = _mapper.Map<Paciente, PacienteReadDto>(paciente), 
+                Alertas = _mapper.Map<List<AlertaReadDto>>(alertas),
+                Registros = _mapper.Map<List<RegistroReadDto>>(registros)
+            };
 
             return Ok(response);
         }
