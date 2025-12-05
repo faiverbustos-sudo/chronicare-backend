@@ -9,5 +9,7 @@ public class MedicamentoProfile : Profile
     public MedicamentoProfile()
     {
         CreateMap<Medicamento, MedicamentoReadDto>();
+        CreateMap<MedicamentoCreateDto, Medicamento>();
+        CreateMap<MedicamentoUpdateDto, Medicamento>();
     }
 }

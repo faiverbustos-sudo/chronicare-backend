@@ -254,7 +254,7 @@ public class PacienteController : ApiControllerBase
                 return NotFound("No existe un paciente asociado a este usuario.");
 
             var NowDate = DateTime.Now.Date;
-            var medicamentosHoy = paciente.Medicamentos.Where(x => NowDate >= x.FechaInicio && NowDate <= x.FechaFin);
+            var medicamentosHoy = paciente.Medicamentos.Where(x => NowDate >= x.FechaInicio && NowDate <= x.FechaFin && x.Activo);
 
             var adherencias = new List<AdherenciaMedicamentoHoyDto>();
             foreach(var medicamento in medicamentosHoy)

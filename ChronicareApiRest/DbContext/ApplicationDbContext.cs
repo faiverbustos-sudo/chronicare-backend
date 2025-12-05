@@ -14,6 +14,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<Registro> Registros { get; set; }
     public DbSet<Medico> Medicos { get; set; }
     public DbSet<AdherenciaMedicamento> AdherenciasMedicamento { get; set; }
+    public DbSet<Medicamento> Medicamentos { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

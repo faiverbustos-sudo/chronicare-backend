@@ -64,6 +64,6 @@ public class PacienteReadDto
 
     public string? ProximoControl { get; set; }
 
-    public ICollection<MedicamentoReadDto> Medicamentos { get; set; } = new List<MedicamentoReadDto>();
+    //public ICollection<MedicamentoReadDto> Medicamentos { get; set; } = new List<MedicamentoReadDto>();
     public ICollection<TareaReadDto> Tareas { get; set; } = new List<TareaReadDto>();
 }
